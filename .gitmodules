@@ -1,0 +1,9 @@
+[submodule "vanilla_js"]
+	path = vanilla_js
+	url = https://github.com/shesharpnl/hackathon-2023.vanilla-js.base-example.git
+[submodule "react_js_base"]
+	path = react_js_base
+	url = https://github.com/shesharpnl/hackathon-2023.react-js.base-example.git
+[submodule "slack_bot"]
+	path = slack_bot
+	url = https://github.com/shesharpnl/hackathon-2023.slack-bot.base-example.git
