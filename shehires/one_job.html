@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <!-- Normalize styles and import your custom styling -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Name your project! -->
+    <title>She hires</title>
+</head>
+<html lang="en">
+    <body>
+        <h1>MORE INFO ABOUT THIS JOB</h1>
+        <h2>
+            <main class="main">
+            <div id="output_name"> </div>
+        </h2>
+        <div id="output_tag" > </div>
+        <div>
+            <h1>Resume Modifier</h1>
+            <form id="chat-form">
+                <div>
+                    <label for="mytext">Enter your Resume:</label>
+                    <input type="text" id="mytext" style="width: 50%;" value=>
+                
+                <!-- <div>
+                    <label for="jobdescription">Enter the job description:</label>
+                    <input type="text" id="jobdescription" style="width: 50%;" required>
+                </div> -->
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div>
+                <h2>Here is your new CV:</h2>
+                <textarea id="response" rows="20" style="width: 80%;" readonly></textarea>
+            </div>
+        </div>
+        <iframe id="map"
+                style="border:0"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDMqjt-xzLOgk-LwScP-UwzlevX6gwPPug
+                    &q=Amsterdam">
+        </iframe>
+        <script src="js/StartupBage/gpt.js"></script>
+    </body>
+</html>

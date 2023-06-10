@@ -8,38 +8,11 @@ async function showMeData() {
         return data;
     }
     let jsonData = await getData();
-    document.getElementById('output').innerHTML = jsonData.data[0].job_name;
-    document.getElementById('output2').innerHTML = jsonData.data[0].tag_categories[0];
-    document.getElementById('output_job_location').innerHTML = jsonData.data[0].job_location;
-    document.getElementById('output_description').innerHTML = jsonData.data[0].job_full_text;
-    if (jsonData.data[0].job_location)
-        document.getElementById('map').src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyDMqjt-xzLOgk-LwScP-UwzlevX6gwPPug&q=" + jsonData.data[0].job_location;
+    // n = 0;
+    // document.getElementById('output').innerHTML = jsonData.data[n].job_name;
+    // document.getElementById('output2').innerHTML = jsonData.data[n].tag_categories[0];
+    // document.getElementById('output_job_location').innerHTML = jsonData.data[n].job_location;
+    // document.getElementById('output_description').innerHTML = jsonData.data[n].job_full_text;
+    // if (jsonData.data[0].job_location)
+    //     document.getElementById('map').src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyDMqjt-xzLOgk-LwScP-UwzlevX6gwPPug&q=" + jsonData.data[0].job_location;
 }
-
-// Initialize and add the map
-let map;
-
-async function initMap() {
-  // The location of Uluru
-  const position = { lat: -25.344, lng: 131.031 };
-  // Request needed libraries.
-  //@ts-ignore
-  const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-
-  // The map, centered at Uluru
-  map = new Map(document.getElementById("map"), {
-    zoom: 4,
-    center: position,
-    mapId: "DEMO_MAP_ID",
-  });
-
-  // The marker, positioned at Uluru
-  const marker = new AdvancedMarkerElement({
-    map: map,
-    position: position,
-    title: "Uluru",
-  });
-}
-
-initMap();
