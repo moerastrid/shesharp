@@ -1,7 +1,7 @@
 document.querySelector('button').addEventListener('click', showMeData);
 
 async function showMeData() {
-    const getData = async () => {
+    const getData = async () => { 
         const response = await fetch('https://shesharpnl.github.io/hackathon-2023.sourcestack-data/assets/junior-nl.json');
         const data = await response.json();
         console.log(data)
@@ -10,7 +10,10 @@ async function showMeData() {
     let jsonData = await getData();
     document.getElementById('output').innerHTML = jsonData.data[0].job_name;
     document.getElementById('output2').innerHTML = jsonData.data[0].tag_categories[0];
-
+    document.getElementById('output_job_location').innerHTML = jsonData.data[0].job_location;
+    document.getElementById('output_description').innerHTML = jsonData.data[0].post_full_text;
+    if (jsonData.data[0].job_location)
+        document.getElementById('map').src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyDMqjt-xzLOgk-LwScP-UwzlevX6gwPPug&q=" + jsonData.data[0].job_location;
 }
 
 // Initialize and add the map
