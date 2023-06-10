@@ -17,11 +17,11 @@ body {
     padding: 6px 12px;
     border-width: 1px;
     transition-property: all;
-    transition-duration: 400ms;
 }
 
 .btn:hover{
     cursor:pointer;
+    color: red;
     background-color: azure;
     scale: 110%;
     
